@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - '4430:443'
+      - '800:80'
+    volumes:
+      - ./vol/bitnami/apache:/bitnami/apache
+      - ./vol/var/www:/app
+      - ./vol/etc/ssl/zk:/etc/ssl/zk
