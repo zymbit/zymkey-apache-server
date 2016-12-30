@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+VHOSTS=/bitnami/apache/conf/vhosts
+
+if [ ! -e ${VHOSTS} ]; then
+  mkdir -p $(dirname ${VHOSTS});
+  
+  cp -rp /var/lib/zymbit/apache/conf/vhosts ${VHOSTS};
+fi;

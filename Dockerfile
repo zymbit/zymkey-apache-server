@@ -10,4 +10,6 @@ RUN mkdir -p ${APACHE_LOG_DIR}
 
 
 COPY files/ /
-RUN chmod +x /usr/local/bin/*
+RUN chmod +x /usr/local/bin/* /docker-entrypoint
+
+ENTRYPOINT ["/docker-entrypoint"]
