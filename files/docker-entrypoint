@@ -1,0 +1,5 @@
+#!/bin/bash
+
+copy-zk-conf
+
+exec /app-entrypoint.sh "$@"
