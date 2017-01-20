@@ -1,5 +1,6 @@
 #!/bin/bash
+set -e
 
 copy-zk-conf
 
-exec /app-entrypoint.sh "$@"
+exec /app-entrypoint.sh nami start --foreground apache
